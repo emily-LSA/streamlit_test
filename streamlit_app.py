@@ -4,8 +4,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 st.title('streamlit test!')
 
-con_left, con_rigtht = st.container([0.5, 0.5])
-# empty1,con2,con3,empty2 = st.columns([0.3,0.5,0.5,0.3])
+con_left, con_rigtht = st.columns([0.5, 0.5])
     
 # input_user_name = st.text_input(label="User Name", value="")
 # input_password = st.text_input(label="Password", value="")
