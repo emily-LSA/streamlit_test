@@ -2,7 +2,7 @@
 import streamlit as st
 
 st.set_page_config(layout="wide")
-st.title('streamlit test!')
+st.title('Set Title!!!')
 
 # input_user_name = st.text_input(label="User Name", value="")
 # input_password = st.text_input(label="Password", value="")
@@ -19,7 +19,7 @@ with con_button:
 
 if (input_password == "mezzo"):
     con = st.container()
-    con.write(f"Hello~ {str(input_user_name)}")
+    con.write(f"안녕하세요, {str(input_user_name)}님.")
     
     tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
 
