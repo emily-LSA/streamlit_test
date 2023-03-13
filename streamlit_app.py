@@ -1,16 +1,20 @@
 # app.py
 import streamlit as st
 
+st.set_page_config(layout="wide")
 st.title('streamlit test!')
 
-input_user_name = st.text_input(label="User Name", value="")
-input_password = st.text_input(label="Password", value="")
-
+con_left, con_rigtht = st.container([0.5, 0.5])
+# empty1,con2,con3,empty2 = st.columns([0.3,0.5,0.5,0.3])
+    
+# input_user_name = st.text_input(label="User Name", value="")
+# input_password = st.text_input(label="Password", value="")
+input_user_name = con_left.st.text_input(label="User Name", value="")
+input_password = con_rigtht.st.text_input(label="Password", value="")
 
 
 if (st.button("Confirm")) & (input_password == "mezzo"):
     con = st.container()
-    con.caption("Result")
     con.write(f"Hello~ {str(input_user_name)}")
     
     tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
@@ -26,4 +30,7 @@ if (st.button("Confirm")) & (input_password == "mezzo"):
 else:
     con = st.container()
     con.write("비밀번호가 틀렸습니다. 확인 후 다시 입력해주세요.")
-
+    
+    
+    
+    
