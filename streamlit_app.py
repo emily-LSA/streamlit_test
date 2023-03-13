@@ -8,7 +8,7 @@ st.title('streamlit test!')
 # input_password = st.text_input(label="Password", value="")
 
 # 상단 로그인
-con_left, con_rigtht = st.columns([0.5, 0.5])
+con_left, con_right = st.columns([0.5, 0.5])
 
 with con_left:
     input_user_name = st.text_input(label="User Name", value="")
