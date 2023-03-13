@@ -8,14 +8,16 @@ st.title('streamlit test!')
 # input_password = st.text_input(label="Password", value="")
 
 # 상단 로그인
-con_left, con_right = st.columns([0.5, 0.5])
+con_id, con_pw, con_button = st.columns([0.2, 0.2, 0.6])
 
-with con_left:
+with con_id:
     input_user_name = st.text_input(label="User Name", value="")
-with con_right:
+with con_pw:
     input_password = st.text_input(label="Password", value="")
+with con_button:
+    confirm_button = st.button("Confirm")
 
-if (st.button("Confirm")) & (input_password == "mezzo"):
+if (input_password == "mezzo"):
     con = st.container()
     con.write(f"Hello~ {str(input_user_name)}")
     
