@@ -4,13 +4,16 @@ import streamlit as st
 st.set_page_config(layout="wide")
 st.title('streamlit test!')
 
-con_left, con_rigtht = st.columns([0.5, 0.5])
-    
 # input_user_name = st.text_input(label="User Name", value="")
 # input_password = st.text_input(label="Password", value="")
-input_user_name = con_left.st.text_input(label="User Name", value="")
-input_password = con_rigtht.st.text_input(label="Password", value="")
 
+# 상단 로그인
+con_left, con_rigtht = st.columns([0.5, 0.5])
+
+with con_left:
+    input_user_name = st.text_input(label="User Name", value="")
+with con_right:
+    input_password = st.text_input(label="Password", value="")
 
 if (st.button("Confirm")) & (input_password == "mezzo"):
     con = st.container()
