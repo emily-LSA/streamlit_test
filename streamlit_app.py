@@ -13,15 +13,15 @@ if (st.button("Confirm")) & (input_password == "mezzo"):
     con.caption("Result")
     con.write(f"Hello~ {str(input_user_name)}")
     
-        tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
+    tab1, tab2= st.tabs(['Tab A' , 'Tab B'])
 
-        with tab1:
-          #tab A 를 누르면 표시될 내용
-          st.write('hello')
+    with tab1:
+      #tab A 를 누르면 표시될 내용
+      st.write('hello')
 
-        with tab2:
-          #tab B를 누르면 표시될 내용 
-          st.write('hi')
+    with tab2:
+      #tab B를 누르면 표시될 내용 
+      st.write('hi')
 
 else:
     con = st.container()
